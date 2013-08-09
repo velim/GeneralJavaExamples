@@ -1,4 +1,4 @@
-package cz.velim.sandbox;
+package cz.velim.sandbox.annonymousclass;
 
 public interface IPerson {
 	
