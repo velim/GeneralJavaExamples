@@ -1,6 +1,7 @@
 package cz.velim.sandbox;
 
-import cz.velim.sandbox.exceptions.ExceptionsTest;
+import cz.velim.sandbox.compare.CompareTest;
+import cz.velim.sandbox.hashmap.HashMapTest;
 
 public class Sandbox {
 
@@ -16,8 +17,14 @@ public class Sandbox {
 //		System.out.println("*** ENUM TEST ***");
 //		EnumsTest.runTest();
 		
-		System.out.println("*** EXCEPTIONS TEST ***");
-		ExceptionsTest.runTest();
+//		System.out.println("*** EXCEPTIONS TEST ***");
+//		ExceptionsTest.runTest();
+		
+//		System.out.println("*** HASHMAP TEST ***");
+//		HashMapTest.runTest();
+		
+		System.out.println("*** COMPARABLE vs COMPARATOR TEST ***");
+		CompareTest.runTest();		
 	}
 
 

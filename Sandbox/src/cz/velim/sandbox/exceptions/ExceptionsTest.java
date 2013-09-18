@@ -25,6 +25,7 @@ public class ExceptionsTest {
 
 		} catch (Exception e) {
 			System.out.println("exception");
+			e.printStackTrace();
 			throw new MyException("my message");
 		} finally {
 			System.out.println("finally");
