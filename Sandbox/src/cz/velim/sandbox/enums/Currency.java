@@ -2,9 +2,9 @@ package cz.velim.sandbox.enums;
 
 public enum Currency {
 	PENNY(1) {
-		
+
 		@Override
-		public String color(){
+		public String color() {
 			return "copper";
 		}
 	},
@@ -33,9 +33,16 @@ public enum Currency {
 
 	};
 	private int value;
+
 	public abstract String color();
 
 	private Currency(int value) {
 		this.value = value;
 	}
+
+	public int getValue() {
+		return value;
+	}
+	
+	
 }

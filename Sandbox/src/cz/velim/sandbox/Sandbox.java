@@ -1,7 +1,6 @@
 package cz.velim.sandbox;
 
 import cz.velim.sandbox.compare.CompareTest;
-import cz.velim.sandbox.hashmap.HashMapTest;
 
 public class Sandbox {
 

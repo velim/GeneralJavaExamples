@@ -11,6 +11,7 @@ public class ExceptionsTest {
 		}
 	}
 
+	@SuppressWarnings("null")
 	static void throwException() throws MyException {
 
 		Integer bigI = null;
