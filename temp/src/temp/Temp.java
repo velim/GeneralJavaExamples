@@ -60,15 +60,15 @@ public class Temp extends Foo {
 			// System.out.println(entry.getKey() + "/" + entry.getValue());
 		}
 
-		// hashmap test
-		Map<Integer, Person> hmap = new TreeMap<Integer, Person>(
+		// treemap test
+		Map<Integer, Person> hmap = new TreeMap<Integer, Person>( // sorting treemap using comparator
 				new Comparator<Integer>() {
 					@Override
 					public int compare(Integer o1, Integer o2) {
 						return o1 - o2;
 					}
 				});
-		for (int i = 0; i < 100; i++)
+		for (int i = 0; i < 50000; i++)
 			hmap.put(i, new Person(String.valueOf(i), UUID.randomUUID()
 					.toString()));
 
@@ -78,11 +78,10 @@ public class Temp extends Foo {
 
 			@Override
 			public int compare(Person o1, Person o2) {
-				return o1.getUUID().compareTo(o2.getUUID());
-				
-//				String rev1 = new StringBuilder(o1.getUUID()).reverse().toString();
-//				String rev2 = new StringBuilder(o2.getUUID()).reverse().toString();
-//				return rev1.compareTo(rev2);
+				//return o1.getUUID().compareTo(o2.getUUID());
+				String s1 = o1.getUUID().split("-")[1];
+				String s2 = o2.getUUID().split("-")[1];
+				return s1.compareTo(s2);
 			}
 
 		});
@@ -97,8 +96,8 @@ public class Temp extends Foo {
 
 		// iterate via keys
 		for (Integer key : hmap.keySet()) {
-			//System.out.println(hmap.get(key).getName());
-			//System.out.println(hmap.get(key).getUUID());
+			System.out.println(hmap.get(key).getName());
+			System.out.println(hmap.get(key).getUUID());
 		}
 
 		System.out.println("\n * * * * * * *");
@@ -107,10 +106,14 @@ public class Temp extends Foo {
 		Iterator<Entry<Integer, Person>> hmit = hmap.entrySet().iterator();
 		while (hmit.hasNext()) {
 			Person pers = hmit.next().getValue();
-			//System.out.println(pers.getName());
-			//System.out.println(pers.getUUID());
+			System.out.println(pers.getName());
+			System.out.println(pers.getUUID());
 		}
 
 	}
+	
+//	static void test(Map map){
+//		map.
+//	}
 
 }
