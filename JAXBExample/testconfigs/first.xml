@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns ="http://www.example.org/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/config ../xslt/config.xsd ">
+  <Id>1</Id>
+  <Type>test</Type>
+  <MainServer>10.12.154.2</MainServer>
+  <LoadClass>Class01</LoadClass>
+</Config>
